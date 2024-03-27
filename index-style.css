@@ -4,7 +4,7 @@
     margin: 0px;
     padding: 0;
 }
-
+/* HEADER */
 #presentation-background {
     width: 100%;
     height: 300px;
@@ -45,6 +45,8 @@
     to {opacity: 100%;}
 }
 
+/* MAIN */
+
 #flex-app-container {
     display: flex;
     flex-flow: column nowrap;
@@ -55,27 +57,26 @@
     flex-flow: row nowrap;
     justify-content: space-evenly;
     align-items: center;
-   
-
     height: 400px;
     width: 100%;
 }
 
-.app-container div {
+.app-container > div {
     height: 80%;
     width: 40%;
+    position: relative;
 }
 
-.text-app-container h1 {
+.text-app-container > h1 {
     text-align: center;
-    margin: 0;
+    margin-bottom: 10px;
     font-size: 3rem;
     font-family: "Raleway";
     color: #A8D5E2;
     border-bottom: 1px solid #7699D4;
 }
 
-.text-app-container p {
+.text-app-container > p {
     text-align: justify;
     margin: 1;
     text-indent: 20px;
@@ -84,11 +85,42 @@
     color: #A8D5E2;
 }
 
+.text-photo-app-container h1, .text-photo-app-container p {
+    margin: 0;
+    padding: 0;
+}
+
+.text-photo-app-container {
+    position: absolute;
+    bottom: 0;
+    opacity: 0%;
+    height: 0px;
+    width: 100%;
+
+    background-color: #6e6f70;
+    transition: 250ms;
+    text-indent: 10px;
+    font-family: "Exo 2", 'Courier New', Courier, monospace;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.photo-app-container:hover .text-photo-app-container {
+    opacity: 100%;
+    height: 100px;
+}
+
+
 .photo-app-container img {
     max-width: 100%;
     max-height: 100%;
+    border: 2px solid black;
+    box-shadow: 0px 0px 5px grey;
 }
 
-.photo-app-container {
+.photo-app-container  {
     text-align: center;
 }
