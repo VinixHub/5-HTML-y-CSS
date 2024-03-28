@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -48,7 +49,7 @@ html {
 #navbar {
     z-index: 1;
     position: sticky;
-    top: 0px;
+    top: -1px;
 }
 
 #navbar-header {
@@ -86,7 +87,13 @@ html {
 
 
 /* MAIN */
+.section-title {
+    font-family: "Exo 2";
+    text-align: center;
+    border-block: 1px solid black;
+}
 
+/*HTML y CSS */
 #flex-app-container {
     display: flex;
     flex-flow: column nowrap;
@@ -130,6 +137,11 @@ html {
     padding: 0;
 }
 
+.photo-app-container {
+    border: 1px solid black;
+    box-shadow: 0px 0px 5px black;
+}
+
 .text-photo-app-container {
     position: absolute;
     bottom: 0;
@@ -138,6 +150,8 @@ html {
     width: 100%;
 
     background-color: #6e6f70;
+    border: 1px solid black;
+    box-shadow: 0 0 5px bl;
     transition: 250ms;
     text-indent: 10px;
     font-family: "Exo 2", 'Courier New', Courier, monospace;
@@ -151,15 +165,4 @@ html {
 .photo-app-container:hover .text-photo-app-container {
     opacity: 100%;
     height: 100px;
-}
-
-.photo-app-container img {
-    max-width: 100%;
-    max-height: 100%;
-    border: 2px solid black;
-    box-shadow: 0px 0px 5px grey;
-}
-
-.photo-app-container  {
-    text-align: center;
 }
