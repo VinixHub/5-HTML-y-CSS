@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    margin: 0;
+}
+
 #presentation-background h1, #presentation-background p {
     margin: 0px;
     padding: 0;
